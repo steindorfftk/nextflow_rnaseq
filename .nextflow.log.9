@@ -1,0 +1,93 @@
+May-30 15:01:39.168 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+May-30 15:01:39.281 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.4
+May-30 15:01:39.310 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/local.hcpa.ufrgs.br/tkruger/.nextflow/plugins; core-plugins: nf-amazon@3.4.4,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.5,nf-k8s@1.2.2,nf-tower@1.17.5,nf-wave@1.16.1
+May-30 15:01:39.341 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-30 15:01:39.342 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-30 15:01:39.345 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+May-30 15:01:39.367 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+May-30 15:01:39.546 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-30 15:01:39.574 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/nextflow.config
+May-30 15:01:39.577 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/nextflow.config
+May-30 15:01:39.618 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+May-30 15:01:40.085 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-30 15:01:40.085 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+May-30 15:01:40.100 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/local.hcpa.ufrgs.br/tkruger/.nextflow/secrets/store.json
+May-30 15:01:40.103 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3bed3315] - activable => nextflow.secret.LocalSecretsProvider@3bed3315
+May-30 15:01:40.119 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+May-30 15:01:40.135 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [tiny_cantor] DSL2 - revision: d404d2fb80
+May-30 15:01:40.188 [main] DEBUG nextflow.Session - Session UUID: e3db0a4b-a005-439b-ad56-9670a14cab05
+May-30 15:01:40.189 [main] DEBUG nextflow.Session - Run name: tiny_cantor
+May-30 15:01:40.189 [main] DEBUG nextflow.Session - Executor pool size: 24
+May-30 15:01:40.198 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+May-30 15:01:40.204 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=72; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+May-30 15:01:40.237 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.4 build 11173
+  Created: 10-02-2026 15:17 UTC (12:17 BRST)
+  System: Linux 6.8.0-84-generic
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 21.0.6+9-b895.97
+  Encoding: UTF-8 (UTF-8)
+  Process: 1377261@milano-a01 [127.0.1.1]
+  CPUs: 24 - Mem: 125.8 GB (29.3 GB) - Swap: 8 GB (7.1 GB)
+May-30 15:01:40.270 [main] DEBUG nextflow.Session - Work-dir: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/work [ext2/ext3]
+May-30 15:01:40.270 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/bin
+May-30 15:01:40.280 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-30 15:01:40.290 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+May-30 15:01:40.293 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+May-30 15:01:40.338 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+May-30 15:01:40.349 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 25; maxThreads: 1000
+May-30 15:01:40.421 [main] DEBUG nextflow.Session - Session start
+May-30 15:01:40.895 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-30 15:01:41.108 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:DOWNLOAD_SRA` matches process DOWNLOAD_SRA
+May-30 15:01:41.113 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-30 15:01:41.113 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-30 15:01:41.124 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+May-30 15:01:41.132 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=24; memory=125.8 GB; capacity=24; pollInterval=100ms; dumpInterval=5m
+May-30 15:01:41.134 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-30 15:01:41.159 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'DOWNLOAD_SRA': maxForks=0; fair=false; array=0
+May-30 15:01:41.194 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FASTQC_RAW` matches process FASTQC_RAW
+May-30 15:01:41.195 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-30 15:01:41.196 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-30 15:01:41.197 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC_RAW': maxForks=0; fair=false; array=0
+May-30 15:01:41.202 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FASTP` matches process FASTP
+May-30 15:01:41.203 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-30 15:01:41.203 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-30 15:01:41.204 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTP': maxForks=0; fair=false; array=0
+May-30 15:01:41.208 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FASTQC_TRIMMED` matches process FASTQC_TRIMMED
+May-30 15:01:41.209 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-30 15:01:41.209 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-30 15:01:41.210 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC_TRIMMED': maxForks=0; fair=false; array=0
+May-30 15:01:41.213 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC_RAW, DOWNLOAD_SRA, FASTP, FASTQC_TRIMMED
+May-30 15:01:41.216 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+May-30 15:01:41.222 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DOWNLOAD_SRA
+May-30 15:01:41.223 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC_RAW
+May-30 15:01:41.223 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTP
+May-30 15:01:41.224 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC_TRIMMED
+May-30 15:01:41.224 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_336c398f7b111bbf: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/main.nf
+May-30 15:01:41.224 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+May-30 15:01:41.224 [main] DEBUG nextflow.Session - Session await
+May-30 15:01:41.384 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-30 15:01:41.387 [Task submitter] INFO  nextflow.Session - [7a/0d4840] Submitted process > DOWNLOAD_SRA (SRR390728)
+May-30 15:06:25.936 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: DOWNLOAD_SRA (SRR390728); status: COMPLETED; exit: 0; error: -; workDir: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/work/7a/0d48403f17bcd6f3a06c04d5c3d6fc]
+May-30 15:06:25.937 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=72; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+May-30 15:06:25.966 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=72; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+May-30 15:06:25.989 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-30 15:06:25.990 [Task submitter] INFO  nextflow.Session - [a0/3441ee] Submitted process > FASTQC_RAW (SRR390728)
+May-30 15:06:41.264 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: FASTQC_RAW (SRR390728); status: RUNNING; exit: -; error: -; workDir: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/work/a0/3441ee2569606a6a969c7a0592c8fe]
+May-30 15:06:45.915 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: FASTQC_RAW (SRR390728); status: COMPLETED; exit: 0; error: -; workDir: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/work/a0/3441ee2569606a6a969c7a0592c8fe]
+May-30 15:06:45.932 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-30 15:06:45.933 [Task submitter] INFO  nextflow.Session - [09/8bbd8a] Submitted process > FASTP (SRR390728)
+May-30 15:06:57.122 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: FASTP (SRR390728); status: COMPLETED; exit: 0; error: -; workDir: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/work/09/8bbd8a418fae6bbf3c9e2dd2e79f66]
+May-30 15:06:57.137 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-30 15:06:57.138 [Task submitter] INFO  nextflow.Session - [fe/d11a65] Submitted process > FASTQC_TRIMMED (SRR390728)
+May-30 15:07:06.871 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: FASTQC_TRIMMED (SRR390728); status: COMPLETED; exit: 0; error: -; workDir: /home/local.hcpa.ufrgs.br/tkruger/Pipelines/rnaseq-preprocessing/work/fe/d11a65b4eb8995584cfde32445d63d]
+May-30 15:07:06.876 [main] DEBUG nextflow.Session - Session await > all processes finished
+May-30 15:07:06.972 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+May-30 15:07:06.972 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-30 15:07:06.975 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+May-30 15:07:06.975 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+May-30 15:07:06.982 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=4; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=41m 23s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=8; peakMemory=16 GB; ]
+May-30 15:07:07.076 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+May-30 15:07:07.088 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+May-30 15:07:07.089 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

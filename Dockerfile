@@ -22,6 +22,8 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     fastqc \
     hisat2 \
+    fastp \
+    multiqc \
     subread \
     samtools \
     bcftools \
