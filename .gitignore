@@ -1,7 +1,7 @@
 work/
 results/
 .nextflow/
-.nextflow.log
+*nextflow.lo*
 *.html
 *.bam
 *.sam
